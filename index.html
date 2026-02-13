@@ -125,6 +125,179 @@
     <div class="copy-notification" id="copyNotification">
         Coupon code copied!
     </div>
+<!-- ..................................... -->
+
+ <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>P.H Paribahan</h1>
+            <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+        </div>
+
+        <!-- Bus Info Card -->
+        <div class="bus-card">
+            <div class="bus-info">
+                <div class="bus-left">
+                    <svg class="bus-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="8" y="16" width="48" height="32" rx="4" />
+                        <line x1="8" y1="28" x2="56" y2="28" />
+                        <circle cx="20" cy="52" r="4" />
+                        <circle cx="44" cy="52" r="4" />
+                        <line x1="24" y1="16" x2="24" y2="12" />
+                        <line x1="40" y1="16" x2="40" y2="12" />
+                    </svg>
+                    <div>
+                        <h3>Greenline Paribahan</h3>
+                        <p class="coach-code">Coach-009-WEB | AC_Business</p>
+                    </div>
+                </div>
+                <div class="seats-left">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="6" width="16" height="12" rx="2"/>
+                    </svg>
+                    40 Seats left
+                </div>
+            </div>
+
+            <div class="journey-info">
+                <div class="info-row">
+                    <span class="label">Route</span>
+                    <span class="value">Dhaka - Sylhet</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Departure Time</span>
+                    <span class="value">9:00 PM</span>
+                </div>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Boarding Point - Laxmipur</span>
+                <span class="tag">Dropping Point - Bogura</span>
+                <span class="tag">Est. Time - 11 Hour</span>
+            </div>
+
+            <div class="price-section">
+                <div class="price-divider"></div>
+                <svg class="price-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+                    <ellipse cx="32" cy="20" rx="12" ry="8"/>
+                    <path d="M20,20 L20,50 L44,50 L44,20"/>
+                    <circle cx="26" cy="32" r="2"/>
+                    <circle cx="38" cy="32" r="2"/>
+                </svg>
+                <div class="price-text">
+                    <div class="price">550 Taka</div>
+                    <div class="per-seat">Per Seat</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="main-section">
+            <!-- Left: Seat Selection -->
+            <div class="seat-panel">
+                <div class="section-header">
+                    <h2>Select Your Seat</h2>
+                    <div class="legends">
+                        <div class="legend">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+                                <rect x="4" y="6" width="16" height="12" rx="2"/>
+                            </svg>
+                            Available
+                        </div>
+                        <div class="legend">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#00C853" stroke="#00C853" stroke-width="2">
+                                <rect x="4" y="6" width="16" height="12" rx="2"/>
+                            </svg>
+                            Selected
+                        </div>
+                    </div>
+                </div>
+
+                <div class="steering">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="#666" stroke-width="3">
+                        <circle cx="32" cy="32" r="20"/>
+                        <circle cx="32" cy="32" r="8"/>
+                        <line x1="32" y1="12" x2="32" y2="24"/>
+                        <line x1="32" y1="40" x2="32" y2="52"/>
+                        <line x1="12" y1="32" x2="24" y2="32"/>
+                        <line x1="40" y1="32" x2="52" y2="32"/>
+                    </svg>
+                </div>
+
+                <div class="seats" id="seatsGrid"></div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="form-panel">
+                <h2>Select Your Seat</h2>
+
+                <div class="selected-box">
+                    <div class="selected-header">
+                        <span>Seat 
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#00C853" stroke="none">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </span>
+                        <span>Class</span>
+                        <span>Price</span>
+                    </div>
+                    <div id="selectedList">
+                        <div class="seat-line">
+                            <span class="seat-id">C2</span>
+                            <span>Economoy</span>
+                            <span>550</span>
+                        </div>
+                        <div class="seat-line">
+                            <span class="seat-id">C2</span>
+                            <span>Economoy</span>
+                            <span>550</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing">
+                    <div class="price-line">
+                        <span>Total Price</span>
+                        <span id="totalPrice">BDT 1100</span>
+                    </div>
+                    <div class="price-line coupon-line">
+                        <span>Have any copupon?</span>
+                        <button class="apply-btn" type="button">Apply</button>
+                    </div>
+                    <div class="price-line grand-line">
+                        <span>Grand Total</span>
+                        <span id="grandTotal">BDT 1100</span>
+                    </div>
+                </div>
+
+                <form class="booking-form">
+                    <div class="form-field">
+                        <label>Passenger Name*</label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="form-field">
+                        <label>Phone Number*</label>
+                        <input type="tel" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-field">
+                        <label>Email ID</label>
+                        <input type="email" placeholder="Enter your email id">
+                    </div>
+                    <button type="submit" class="next-btn">Next</button>
+                </form>
+
+                <div class="links">
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Cancellation Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ........................................... -->
+
+
+
+
 
 <!-- javascript ................ -->
     <script src="script.js"></script>
